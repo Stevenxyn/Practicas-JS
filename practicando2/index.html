@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objetos</h1>
+
+    <p><b>Undefind </b>= cuando una variable no a sido inicializada o no existe</p>
+    <p><b>NaN</b> = Cuando lo que recibe o el dato no es un numero No a Number</p>
+
+
+    <h2>Control de Empleados</h2>
+
+
+    <label>Nombre Empleado</label>
+        <input type="text" id="txtNombre" placeholder="nombre empleado"> <br><br>
+    <label>Cargo</label>
+        <input type="text" id="txtCargo" placeholder="cargo empleado"><br><br>
+    <label>Telefono contacto</label>
+        <input type="tel" id="txtContacto" placeholder="telefono contacto"><br><br>
+    <label>Correo personal</label>
+        <input type="email" id="txtCorreo" placeholder="correo personal"><br><br>
+    <label>Fecha ingreso</label>
+        <input type="date" id="txtFechaIngreso" placeholder="fecha ingreso"><br><br>
+    <label>Credencial Empleado</label>
+        <input type="file" id="txtCredencial"><br><br>
+        <button id="btnAgregarEmpleado">Agregar Empleado</button>
+        <br><br>
+
+
+
+    <div id="mostrarConsultas"></div>
+
+
+
+    <script src="./main.js"></script>
+    <script>
+        var Banda = {
+            "nombre": "metallica",
+            "genero": "Metal",
+            "integrantes": {
+                "cantante": "cantante vocal",
+                "guitarrista": "guitarrista principal",
+                "baterista": "baterista principal",
+                "bajo": "bajista principal"
+            },
+            "paginaWeb": "www.metallica.com",
+            "redesSociales": {
+                "facebook": "www.facebook/metallica.com",
+                "youtube": "www.youtube/metallica.com",
+                "instagram": "www.instagram/metallica.com",
+                "twitter": "www.twitter/metallica.com"
+            },
+            "estadoBanda": "activos"
+        }
+/*     const mostrarDatos = document.getElementById("mostrarConsultas");
+                                mostrarDatos.innerHTML = Banda.redesSociales.facebook;
+                        */
+
+
+    </script>
+
+
+</body>
+
+</html>

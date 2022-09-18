@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<p><b>Undefind </b>= cuando una variable no a sido inicializada o no existe</p>
+<p><b>NaN</b> = Cuando lo que recibe o el dato no es un numero No a Number</p>
+
+
+<h1>To do list</h1>
+<label>Tus pendientes</label>
+<input type="text" id="txtTarea" placeholder="Escribe aquii" required>
+
+<button id="btnAgregar">agregar pendiente!</button>
+<button id ="btnMostrarArray">Mostrar array</button>
+
+<div id="listTareas">
+
+</div>
+<hr>
+<div id="listArray"></div>
+
+
+
+
+<script>
+
+var nombres = [];
+
+//agregar al array primera forma no muy recomendada
+/*
+nombres [0] = "steven"
+nombres [1] = "spencer"
+console.log(nombres);
+*/
+
+//forma pro de agregar
+nombres.push("Nombre1", "Nombre2", "Nombre3")
+/*
+for(let i = 0; i < nombres.length; i++){
+    console.log("Posicion: " + i + " Elemento: " + nombres[i])
+}
+*/
+
+//con otro ciclo for recorre mas rapido
+/*
+for(var nombre of nombres){
+    console.log(nombre);
+}
+*/
+
+
+window.onload = inicio();
+
+var misTareas = [];
+
+function inicio(){
+    var btnAgregar = document.getElementById("btnAgregar");
+    btnAgregar.addEventListener("click", clickBtnAgregar)
+    var btnMostrarArray = document.getElementById("btnMostrarArray");
+    btnMostrarArray.addEventListener("click",clickMostrarArray);
+    
+}
+
+
+function clickBtnAgregar (){
+    //al oprimir el boton vamos a obtener el valor del textarea y lo guardamos en la variable
+    var txtTarea = document.getElementById("txtTarea");
+    //la variable se recibe la etiqueta entonces vamos a ocupar .value para el valor de la etiqueta
+    var tarea = txtTarea.value;
+    misTareas.push(tarea)
+    //apenas se agreguen las tareas las muestre llamando la funcion
+    mostrarTareas()
+}
+
+function clickMostrarArray(){
+    var listArray = document.getElementById("listArray");
+    listArray.innerHTML = misTareas.reverse()
+}
+
+
+function mostrarTareas() {
+    var listadoTareas = document.getElementById("listTareas");
+    //con esto armo como quiero que se vea
+    var html = "";
+    for(let tarea of misTareas){
+        html += tarea + "<br/>" ;
+    }
+    listTareas.innerHTML = html
+}
+
+
+
+
+</script>
+
+</body>
+</html>
